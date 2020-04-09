@@ -28,6 +28,8 @@ class ButtonListener implements ActionListener
       {System.out.println(metric + " Account Balance is "+result);}
       if (objects[0].getClass().getName().equals("Country")) 
       {System.out.println(metric + " Country Area is "+result);}
+      if (objects[0].getClass().getName().equals("Quiz")) 
+      {System.out.println(metric + " Quiz Score is "+result);}
       
    }
 }

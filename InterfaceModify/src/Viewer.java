@@ -27,6 +27,15 @@ public class Viewer
 	      countries[0] = new Country("Uruguay", 176220);
 	      countries[1] = new Country("Thailand", 513120);
 	      countries[2] = new Country("Belgium", 30510);	   
+	      
+	      Measurable[] quizzes = new Measurable[5];
+	      quizzes[0] = new Quiz("Joe",60);
+	      quizzes[1] = new Quiz("Sally",90);
+	      quizzes[2] = new Quiz("Jane",100);
+	      quizzes[3] = new Quiz("Billy",85);
+	      quizzes[4] = new Quiz("Sue",75);
+	      
+	      
 	   System.out.print("Enter metric to use, 1 for maximum, 2 for minimum, 3 for average: ");
 	   int whichMetric = in.nextInt();
 	   String metricToUse="average";
@@ -51,6 +60,12 @@ public class Viewer
       panel.add(button2);
       ActionListener listener2 = new ButtonListener(countries,metricToUse);
       button2.addActionListener(listener2);
+      
+ //Creating new button and listener for Quiz
+      JButton button3 = new JButton("Get " + metricToUse + " Score");
+      panel.add(button3);
+      ActionListener listener3 = new ButtonListener(quizzes,metricToUse);
+      button3.addActionListener(listener3);
 
 //Now display frame with buttons      
       frame.setSize(FRAME_WIDTH, FRAME_HEIGHT);
